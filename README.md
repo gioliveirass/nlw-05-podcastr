@@ -1,2 +1,2 @@
-# nlw-05-podcastr
-Em progresso
+# Em breve
+O projeto ainda está sendo iniciado!
