@@ -38,6 +38,7 @@ export function Player() {
                 <div className={styles.progress}>
                     <span>00:00</span>
                     <div className={styles.slider}>
+                        { episode ? (
                             <Slider 
                                 trackStyle={{ backgroundColor: '#04D361' }}
                                 railStyle={{ backgroundColor: '#9F75FF' }}
