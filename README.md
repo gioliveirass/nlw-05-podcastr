@@ -18,7 +18,7 @@
 
 ## <a id="projeto"> 💻 Projeto </a>
 
-> Ainda em construção...
+Podcastr é uma plataforma de transmissão de podcasts. É um projeto desenvolvido durante a quinta edição da [Next Level Week](https://nextlevelweek.com), um evento da [Rocketseat](https://rocketseat.com.br/).
 
 ## <a id="layout"> 🔖 Layout </a>
 
