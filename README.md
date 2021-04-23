@@ -37,17 +37,17 @@ Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node
 
 ```
 # Para clonar o projeto e abrir a pasta /podcastrnext:
-git clone https://github.com/gioliveirass/nlw-05-podcastr.git && cd nlw-05-podcastr && cd podcastrnext
+$ git clone https://github.com/gioliveirass/nlw-05-podcastr.git && cd nlw-05-podcastr && cd podcastrnext
 
 # Para instalar as dependências:
-npm install 
+$ npm install 
 
 # Para rodar o servidor:
-npm run server
+$ npm run server
 
-# Com a pasta /nlw-05-podcastr/podcasternext aberta em uma nova janela do terminal, execute o comando seguinte para iniciar o projeto:
-npm run dev
-
+# Com a pasta /nlw-05-podcastr/podcasternext aberta em uma nova janela do terminal
+# Execute o comando seguinte para iniciar o projeto:
+$ npm run dev
 ```
 
 O projeto será iniciado em http://localhost:3000.
