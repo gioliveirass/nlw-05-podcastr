@@ -33,9 +33,10 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ## <a id="iniciando"> 🚀 Iniciando </a>
 
-Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório.
+Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório. Se já tiver feito as instalações necessárias, abra o terminal e execute as linhas de comando:
 
-> Ainda em construção...
+
+O projeto será iniciado em http://localhost:3000.
 
 ## <a id="licença"> 📝 Licença </a>
 
