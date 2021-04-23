@@ -10,13 +10,6 @@ export function Player() {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [progress, setProgress] = useState(0);
 
-    function setupProgressListener() {
-        audioRef.current.currentTime = 0;
-        audioRef.current.addEventListener('timeupdate', () => {
-            setProgress(Math.floor(audioRef.current.currentTime));
-        });
-    }
-
     const { episodeList, 
         currentEpisodeIndex, 
         isPlaying, 
@@ -30,6 +23,7 @@ export function Player() {
         playPrevious,
         hasNext,
         hasPrevious,
+        clearPlayerState,
     } = usePlayer();
 
     useEffect(() => {
@@ -43,6 +37,29 @@ export function Player() {
             audioRef.current.pause();
         }
     }, [isPlaying])
+
+    // CONTROLE DE TEMPO ATUAL
+    function setupProgressListener() {
+        audioRef.current.currentTime = 0;
+        audioRef.current.addEventListener('timeupdate', () => {
+            setProgress(Math.floor(audioRef.current.currentTime));
+        });
+    }
+
+    // CONTROLE DA INTERAÇÃO COM O SLIDER
+    function handleSeek(amount: number) {
+        audioRef.current.currentTime = amount;
+        setProgress(amount);
+    }
+
+    // TOCAR SHUFFLE
+    function handleEpisodesEnded() {
+        if (hasNext) {
+            playNext()
+        } else {
+            clearPlayerState()
+        }
+    }
     
     const episode = episodeList[currentEpisodeIndex]
 
@@ -79,6 +96,7 @@ export function Player() {
                             <Slider 
                                 max={episode.duration}
                                 value={progress}
+                                onChange={handleSeek}
                                 trackStyle={{ backgroundColor: '#04D361' }}
                                 railStyle={{ backgroundColor: '#9F75FF' }}
                                 handleStyle={{ borderColor: '#04D361', borderWidth: 4}}
@@ -96,6 +114,7 @@ export function Player() {
                         ref={audioRef}
                         loop={isLooping}
                         autoPlay
+                        onEnded={handleEpisodesEnded}
                         onPlay={() => setPlayingState(true)}
                         onPause={() => setPlayingState(false)}
                         onLoadedMetadata={setupProgressListener}
