@@ -35,6 +35,20 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório. Se já tiver feito as instalações necessárias, abra o terminal e execute as linhas de comando:
 
+```
+# Para clonar o projeto e abrir a pasta /podcastrnext:
+git clone https://github.com/gioliveirass/nlw-05-podcastr.git && cd nlw-05-podcastr && cd podcastrnext
+
+# Para instalar as dependências:
+npm install 
+
+# Para rodar o servidor:
+npm run server
+
+# Com a pasta /nlw-05-podcastr/podcasternext aberta em uma nova janela do terminal, execute o comando seguinte para iniciar o projeto:
+npm run dev
+
+```
 
 O projeto será iniciado em http://localhost:3000.
 
